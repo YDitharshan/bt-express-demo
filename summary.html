@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BT Express | Travel Summary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="summary.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="container page-header-inner">
+      <a href="index.html" class="page-brand">
+        <img src="logo.png" alt="BT Express" class="page-logo">
+        <span>Travel Summary</span>
+      </a>
+      <a href="seat-selection.html" class="back-btn">Back</a>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <div class="container">
+      <section class="summary-layout">
+        <div class="summary-card large">
+          <span class="badge">Step 5 of 5</span>
+          <h1>Review your travel summary</h1>
+          <p class="subtext">Check bus details, personal details and selected seat before booking.</p>
+
+          <div class="summary-section">
+            <h3>Bus Details</h3>
+            <div class="row"><strong>Route</strong><span id="summaryRouteMain">Batticaloa ⇄ Colombo</span></div>
+            <div class="row"><strong>Type</strong><span>A/C</span></div>
+            <div class="row"><strong>Date</strong><span>2026-03-31</span></div>
+            <div class="row"><strong>Departure</strong><span>06:30 PM</span></div>
+            <div class="row"><strong>Arrival</strong><span>03:30 AM</span></div>
+            <div class="row"><strong>Seat</strong><span id="summarySeatText">08</span></div>
+          </div>
+
+          <div class="summary-section">
+            <h3>Personal Details</h3>
+            <div class="row"><strong>Name</strong><span>Nimal Perera</span></div>
+            <div class="row"><strong>NIC</strong><span>200012345678</span></div>
+            <div class="row"><strong>Phone</strong><span>0771234567</span></div>
+            <div class="row"><strong>Mail</strong><span>nimal@example.com</span></div>
+            <div class="row"><strong>Pickup</strong><span>Eravur</span></div>
+          </div>
+        </div>
+
+        <aside class="payment-card">
+          <h3>Payment Option</h3>
+          <p class="subtext small">Choose how the customer will complete payment.</p>
+
+          <label class="payment-option">
+            <input type="radio" name="payment" checked>
+            <span>Pay Now</span>
+          </label>
+
+          <label class="payment-option">
+            <input type="radio" name="payment">
+            <span>Pay on Point</span>
+          </label>
+
+          <button class="primary-btn" onclick="window.location.href='success.html'">Book Bus</button>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

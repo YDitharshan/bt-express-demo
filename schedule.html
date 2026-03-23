@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BT Express | Bus Schedule</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="schedule.css" />
+</head>
+<body>
+  <header class="page-header" id="pageHeader">
+    <div class="container page-header-inner">
+      <a href="index.html" class="page-brand">
+        <img src="logo.png" alt="BT Express" class="page-logo">
+        <span>BT EXPRESS</span>
+      </a>
+      <a href="index.html" class="back-btn">Back</a>
+    </div>
+  </header>
+
+  <section class="route-banner">
+    <div class="container route-banner-inner">
+      <div>
+        <p class="label">Selected Route</p>
+        <h1 id="selectedRouteText">Batticaloa (Arayampathy) ⇄ Colombo (Moratuwa)</h1>
+      </div>
+      <button class="modify-btn" onclick="window.location.href='index.html'">Modify Route</button>
+    </div>
+  </section>
+
+  <main class="page-shell">
+    <div class="container">
+      <section class="schedule-layout">
+        <div class="schedule-main-card">
+          <div class="schedule-top">
+            <div>
+              <span class="badge">Available Bus</span>
+              <h2>BT Express Premium Line</h2>
+              <p class="stops">
+                Batticaloa > Urani > Eravur > Chenkalady > Colombo
+              </p>
+            </div>
+            <img src="bus-card.png" alt="Bus" class="bus-card-image">
+          </div>
+
+          <div class="schedule-stats">
+            <div class="stat-box">
+              <span>Departure</span>
+              <strong>06:30 PM</strong>
+            </div>
+            <div class="stat-arrow">➜</div>
+            <div class="stat-box">
+              <span>Arrival</span>
+              <strong>03:30 AM</strong>
+            </div>
+            <div class="divider"></div>
+            <div class="stat-box">
+              <span>Seats Available</span>
+              <strong>39</strong>
+            </div>
+          </div>
+
+          <div class="selector-card">
+            <div class="field-grid">
+              <div class="field">
+                <label for="busType">Bus Type</label>
+                <select id="busType">
+                  <option>A/C</option>
+                  <option>Non A/C</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="travelDate">Travel Date</label>
+                <input type="date" id="travelDate">
+              </div>
+            </div>
+
+            <button class="primary-btn" onclick="window.location.href='passenger-details.html'">Continue</button>
+          </div>
+        </div>
+
+        <aside class="schedule-side-card">
+          <h3>Bus Information</h3>
+          <div class="info-row"><strong>Route Type</strong><span>A/C</span></div>
+          <div class="info-row"><strong>Closing</strong><span>Same Day</span></div>
+          <div class="info-row"><strong>Pickup Start</strong><span>Batticaloa</span></div>
+          <div class="info-row"><strong>Drop End</strong><span>Colombo</span></div>
+          <div class="info-row"><strong>Status</strong><span>Open for Booking</span></div>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

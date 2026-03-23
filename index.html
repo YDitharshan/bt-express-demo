@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BT Express | Smart Bus Booking</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="BT Express logo" class="brand-logo">
+        <div class="brand-copy">
+          <h1>BT EXPRESS</h1>
+          <p>Comfortable intercity travel</p>
+        </div>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="#home">Home</a>
+        <a href="#routes">Routes</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="tel:0770101107" class="hotline-btn">077 01 01 107</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section" id="home">
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Trusted bus booking experience</span>
+          <h2>Book your trip with a <span>professional and simple</span> customer flow</h2>
+          <p>
+            Select your route first, continue to bus details, choose date and type, fill passenger details,
+            select your seat, review your travel summary and confirm your ticket.
+          </p>
+
+          <div class="hero-badges">
+            <span>Route-first booking</span>
+            <span>Responsive UI</span>
+            <span>PDF ticket download</span>
+          </div>
+        </div>
+
+        <div class="booking-panel" id="routes">
+          <div class="panel-head">
+            <h3>Select Route</h3>
+            <p>Choose departure and destination first</p>
+          </div>
+
+            <form id="routeForm" class="route-form">
+              <div class="panel-note">
+                Customer can only choose from available BT Express routes.
+              </div>
+
+              <div class="route-card-list" id="routeCardList">
+                <button type="button" class="route-select-card non-ac" data-route="Non A/C Thirukkovil -> Colombo (Moratuwa)">
+                  <span class="route-type non-ac-text">Non A/C</span>
+                  <strong>Thirukkovil → Colombo (Moratuwa)</strong>
+                </button>
+
+                <button type="button" class="route-select-card non-ac" data-route="Non A/C Colombo (Moratuwa) -> Thirukkovil">
+                  <span class="route-type non-ac-text">Non A/C</span>
+                  <strong>Colombo (Moratuwa) → Thirukkovil</strong>
+                </button>
+
+                <button type="button" class="route-select-card ac" data-route="A/C Batticaloa (Arayampathy) -> Colombo (Moratuwa)">
+                  <span class="route-type ac-text">A/C</span>
+                  <strong>Batticaloa (Arayampathy) → Colombo (Moratuwa)</strong>
+                </button>
+
+                <button type="button" class="route-select-card ac" data-route="A/C Colombo (Moratuwa) -> Batticaloa (Arayampathy)">
+                  <span class="route-type ac-text">A/C</span>
+                  <strong>Colombo (Moratuwa) → Batticaloa (Arayampathy)</strong>
+                </button>
+
+                <button type="button" class="route-select-card ac" data-route="A/C Akkaraipattu -> Jaffna">
+                  <span class="route-type ac-text">A/C</span>
+                  <strong>Akkaraipattu → Jaffna</strong>
+                </button>
+
+                <button type="button" class="route-select-card ac" data-route="A/C Jaffna -> Akkaraipattu">
+                  <span class="route-type ac-text">A/C</span>
+                  <strong>Jaffna → Akkaraipattu</strong>
+                </button>
+
+                <button type="button" class="route-select-card ac" data-route="A/C Akkaraipattu -> Trincomalee">
+                  <span class="route-type ac-text">A/C</span>
+                  <strong>Akkaraipattu → Trincomalee</strong>
+                </button>
+
+                <button type="button" class="route-select-card ac" data-route="A/C Trincomalee -> Akkaraipattu">
+                  <span class="route-type ac-text">A/C</span>
+                  <strong>Trincomalee → Akkaraipattu</strong>
+                </button>
+
+                <button type="button" class="route-select-card ac" data-route="A/C Ampara -> Trincomalee">
+                  <span class="route-type ac-text">A/C</span>
+                  <strong>Ampara → Trincomalee</strong>
+                </button>
+
+                <button type="button" class="route-select-card ac" data-route="A/C Trincomalee -> Ampara">
+                  <span class="route-type ac-text">A/C</span>
+                  <strong>Trincomalee → Ampara</strong>
+                </button>
+              </div>
+
+              <input type="hidden" id="selectedRouteInput" value="">
+
+              <button type="submit" class="primary-btn">Book Now</button>
+            </form>
+        </div>
+      </div>
+
+      <div class="hero-bus-wrap">
+        <img src="hero-bus.png" alt="BT Express Bus" class="hero-bus">
+      </div>
+    </section>
+
+    <section class="why-section" id="why">
+      <div class="container">
+        <div class="section-head">
+          <h3>Designed to impress on every screen</h3>
+          <p>
+            This premium demo design is optimized for mobile, tablet and desktop with a cleaner booking journey,
+            stronger bus visuals and a more professional look for client presentations.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">🚌</div>
+            <h4>Clear route-first journey</h4>
+            <p>Customers begin by selecting the correct bus route, then move smoothly into bus details and booking steps.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🎟️</div>
+            <h4>Better ticket clarity</h4>
+            <p>Reference number, NIC number, seat, route and payment option are clearly presented in the final ticket flow.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h4>Responsive premium UI</h4>
+            <p>Spacing, cards, buttons and layouts are tuned for a more polished experience on phones, tablets and desktops.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-inner">
+        <div>
+          <h4>BT Express Demo Project</h4>
+          <p>Professional bus booking concept UI for customer flow demonstration.</p>
+        </div>
+        <div class="footer-meta">
+          <span>Hotline: 077 01 01 107</span>
+          <span>Email: support@btexpress.lk</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

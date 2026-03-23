@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BT Express | Booking Successful</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="success.css" />
+</head>
+<body>
+  <main class="success-wrap">
+    <section class="success-card">
+      <div class="success-icon">✓</div>
+      <span class="badge">Booking Successful</span>
+      <h1>Reservation confirmed</h1>
+      <p>Your booking has been completed successfully. The customer can now download the ticket as PDF.</p>
+
+      <div class="ticket-data" id="ticketContent">
+        <div class="row"><strong>Reference Number</strong><span>BTX-2026-10254</span></div>
+        <div class="row"><strong>Name</strong><span>Nimal Perera</span></div>
+        <div class="row"><strong>NIC Number</strong><span>200012345678</span></div>
+        <div class="row"><strong>Route</strong><span id="successRouteText">Batticaloa ⇄ Colombo</span></div>
+        <div class="row"><strong>Seat</strong><span id="successSeatText">08</span></div>
+        <div class="row"><strong>Payment</strong><span>Pay Now</span></div>
+      </div>
+
+      <div class="button-group">
+        <a href="index.html" class="home-btn">Back to Home</a>
+        <button id="downloadTicketBtn" class="outline-btn">Download Your Ticket</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

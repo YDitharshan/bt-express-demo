@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BT Express | Seat Selection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="seat-selection.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="container page-header-inner">
+      <a href="index.html" class="page-brand">
+        <img src="logo.png" alt="BT Express" class="page-logo">
+        <span>Seat Selection</span>
+      </a>
+      <a href="passenger-details.html" class="back-btn">Back</a>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <div class="container">
+      <section class="top-card">
+        <div>
+          <span class="badge">Step 4 of 5</span>
+          <h1>Select your bus seats</h1>
+          <p>Booked seats are red, available seats are white, and selected seats are orange.</p>
+        </div>
+
+        <div class="legend">
+          <span><i class="seat-box available"></i> Available</span>
+          <span><i class="seat-box booked"></i> Booked</span>
+          <span><i class="seat-box selected"></i> Selected</span>
+        </div>
+      </section>
+
+      <section class="seat-layout-grid">
+        <div class="seat-card">
+          <div class="seat-card-head">
+            <div>
+              <h3>Bus Seat Layout</h3>
+              <p>Choose one or more seats from the graphical bus view</p>
+            </div>
+          </div>
+
+          <div class="bus-shell">
+            <div class="bus-front-row">
+              <div class="front-label">Front</div>
+              <div class="driver-zone">
+                <div class="steering-wheel">◉</div>
+                <span>Driver</span>
+              </div>
+            </div>
+
+            <div class="seat-layout" id="seatGrid">
+              <!-- Row 1 -->
+              <button class="seat" type="button">01</button>
+              <button class="seat booked" type="button" disabled>02</button>
+              <div class="aisle"></div>
+              <button class="seat booked" type="button" disabled>03</button>
+              <button class="seat" type="button">04</button>
+
+              <!-- Row 2 -->
+              <button class="seat" type="button">05</button>
+              <button class="seat" type="button">06</button>
+              <div class="aisle"></div>
+              <button class="seat booked" type="button" disabled>07</button>
+              <button class="seat" type="button">08</button>
+
+              <!-- Row 3 -->
+              <button class="seat" type="button">09</button>
+              <button class="seat" type="button">10</button>
+              <div class="aisle"></div>
+              <button class="seat" type="button">11</button>
+              <button class="seat" type="button">12</button>
+
+              <!-- Row 4 -->
+              <button class="seat booked" type="button" disabled>13</button>
+              <button class="seat" type="button">14</button>
+              <div class="aisle"></div>
+              <button class="seat" type="button">15</button>
+              <button class="seat" type="button">16</button>
+
+              <!-- Row 5 -->
+              <button class="seat" type="button">17</button>
+              <button class="seat" type="button">18</button>
+              <div class="aisle"></div>
+              <button class="seat booked" type="button" disabled>19</button>
+              <button class="seat" type="button">20</button>
+
+              <!-- Row 6 -->
+              <button class="seat" type="button">21</button>
+              <button class="seat" type="button">22</button>
+              <div class="aisle"></div>
+              <button class="seat" type="button">23</button>
+              <button class="seat" type="button">24</button>
+
+              <!-- Row 7 -->
+              <button class="seat" type="button">25</button>
+              <button class="seat booked" type="button" disabled>26</button>
+              <div class="aisle"></div>
+              <button class="seat" type="button">27</button>
+              <button class="seat" type="button">28</button>
+
+              <!-- Row 8 -->
+              <button class="seat" type="button">29</button>
+              <button class="seat" type="button">30</button>
+              <div class="aisle"></div>
+              <button class="seat booked" type="button" disabled>31</button>
+              <button class="seat" type="button">32</button>
+
+              <!-- Row 9 -->
+              <button class="seat" type="button">33</button>
+              <button class="seat" type="button">34</button>
+              <div class="aisle"></div>
+              <button class="seat" type="button">35</button>
+              <button class="seat" type="button">36</button>
+
+              <!-- Row 10 -->
+              <button class="seat" type="button">37</button>
+              <button class="seat" type="button">38</button>
+              <div class="aisle"></div>
+              <button class="seat booked" type="button" disabled>39</button>
+              <button class="seat" type="button">40</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="summary-card">
+          <h3>Bus Summary</h3>
+          <div class="row"><strong>Route</strong><span id="seatRouteText">Batticaloa ⇄ Colombo</span></div>
+          <div class="row"><strong>Type</strong><span>A/C</span></div>
+          <div class="row"><strong>Date</strong><span>2026-03-31</span></div>
+          <div class="row"><strong>Departure</strong><span>06:30 PM</span></div>
+
+          <h3>Personal Details</h3>
+          <div class="row"><strong>Name</strong><span>Nimal Perera</span></div>
+          <div class="row"><strong>NIC</strong><span>200012345678</span></div>
+          <div class="row"><strong>Pickup</strong><span>Eravur</span></div>
+
+          <h3>Seat Details</h3>
+          <div class="row"><strong>Selected Seats</strong><span id="selectedSeatText">None</span></div>
+
+          <button class="primary-btn" onclick="window.location.href='summary.html'">Continue to Summary</button>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
